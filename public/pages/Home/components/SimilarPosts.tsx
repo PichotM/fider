@@ -60,8 +60,8 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
     return (
       <>
         <Heading
-          title="Similar posts"
-          subtitle="Consider voting on existing posts instead."
+          title="Publications similaires"
+          subtitle="Considérez voter/commenter les publications existances."
           icon={FaRegLightbulb}
           size="small"
           dividing={true}
@@ -72,7 +72,7 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
           <ListPosts
             posts={this.state.posts}
             tags={this.props.tags}
-            emptyText={`No similar posts matched '${this.props.title}'.`}
+            emptyText={`Aucun post similaire trouvé '${this.props.title}'.`}
           />
         )}
       </>

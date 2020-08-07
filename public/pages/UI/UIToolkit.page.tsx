@@ -500,7 +500,7 @@ const UIToolkitPage = () => {
 
       <Segment>
         <h1>Search</h1>
-        <Input field="search" placeholder="Search..." icon={FaSearch} />
+        <Input field="search" placeholder="Rechercher..." icon={FaSearch} />
       </Segment>
     </div>
   );

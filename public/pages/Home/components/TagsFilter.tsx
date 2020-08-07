@@ -39,7 +39,7 @@ export class TagsFilter extends React.Component<TagsFilterProps, TagsFilterState
   private renderText = () => {
     const text =
       this.state.selected.length === 0
-        ? "any tag"
+        ? "tous les tags"
         : this.state.selected.length === 1
         ? "1 tag"
         : `${this.state.selected.length} tags`;
@@ -67,7 +67,7 @@ export class TagsFilter extends React.Component<TagsFilterProps, TagsFilterState
 
     return (
       <div>
-        <span className="subtitle">with</span>
+        <span className="subtitle">avec</span>
         <DropDown
           className="l-tags-filter"
           inline={true}

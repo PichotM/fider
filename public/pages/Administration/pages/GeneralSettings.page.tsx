@@ -115,7 +115,7 @@ export default class GeneralSettingsPage extends AdminBasePage<{}, GeneralSettin
           maxLength={60}
           value={this.state.invitation}
           disabled={!Fider.session.user.isAdministrator}
-          placeholder="Enter your suggestion here..."
+          placeholder="Entrez votre suggestion ici.."
           onChange={this.setInvitation}
         >
           <p className="info">

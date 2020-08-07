@@ -75,11 +75,11 @@ export const PostInput = (props: PostInputProps) => {
         onChange={handleDescriptionChange}
         value={description}
         minRows={5}
-        placeholder="Describe your suggestion (optional)"
+        placeholder="Décrivez votre idée"
       />
       <MultiImageUploader field="attachments" maxUploads={3} previewMaxWidth={100} onChange={setAttachments} />
       <Button type="submit" color="positive" onClick={submit}>
-        Submit
+        Envoyer
       </Button>
     </>
   );
