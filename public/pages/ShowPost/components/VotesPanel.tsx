@@ -34,22 +34,22 @@ export const VotesPanel = (props: VotesPanelProps) => {
   return (
     <>
       <VotesModal post={props.post} isOpen={isVotesModalOpen} onClose={closeModal} />
-      <span className="subtitle">Voters</span>
+      <span className="subtitle">Voteurs</span>
       <div className="l-votes-list">
         {props.votes.map(x => (
           <Avatar key={x.user.id} user={x.user} />
         ))}
         {extraVotesCount > 0 && (
           <span onClick={openModal} className={moreVotesClassName}>
-            +{extraVotesCount} more
+            +{extraVotesCount} plus
           </span>
         )}
         {props.votes.length > 0 && extraVotesCount === 0 && canShowAll() && (
           <span onClick={openModal} className={moreVotesClassName}>
-            see details
+            voir les détails
           </span>
         )}
-        {props.votes.length === 0 && <span className="info">None yet</span>}
+        {props.votes.length === 0 && <span className="info">Aucun</span>}
       </div>
     </>
   );

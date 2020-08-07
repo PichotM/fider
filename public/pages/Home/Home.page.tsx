@@ -70,7 +70,7 @@ const HomePage = (props: HomePageProps) => {
             style="full"
           />
           <PostInput
-            placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."}
+            placeholder={fider.session.tenant.invitation || "Entre votre suggestion ici..."}
             onTitleChanged={setTitle}
           />
         </div>

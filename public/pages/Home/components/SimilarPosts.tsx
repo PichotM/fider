@@ -61,7 +61,7 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
       <>
         <Heading
           title="Publications similaires"
-          subtitle="Considérez voter/commenter les publications existances."
+          subtitle="Considérez commenter/voter sur les publications existantes."
           icon={FaRegLightbulb}
           size="small"
           dividing={true}

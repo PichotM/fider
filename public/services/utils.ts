@@ -18,18 +18,18 @@ export const classSet = (input?: any): string => {
 };
 
 const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Decembre"
 ];
 
 export const currencySymbol = (currencyCode: string): string => {
@@ -62,21 +62,21 @@ export const formatDate = (input: Date | string, format: DateFormat = "full"): s
   const day = date.getDate();
   const hours = twoDigits(date.getHours());
   const minutes = twoDigits(date.getMinutes());
-  return `${monthNames[monthIndex]} ${day}, ${year} · ${hours}:${minutes}`;
+  return `${day} ${monthNames[monthIndex]}, ${year} · ${hours}:${minutes}`;
 };
 
 const templates: { [key: string]: string } = {
-  seconds: "less than a minute",
-  minute: "about a minute",
+  seconds: "récemment",
+  minute: "une minute",
   minutes: "%d minutes",
-  hour: "about an hour",
-  hours: "about %d hours",
-  day: "a day",
-  days: "%d days",
-  month: "about a month",
-  months: "%d months",
-  year: "about a year",
-  years: "%d years"
+  hour: "une heure",
+  hours: "%d heures",
+  day: "un jour",
+  days: "%d jours",
+  month: "un mois",
+  months: "%d mois",
+  year: "un an",
+  years: "%d ans"
 };
 
 const template = (t: string, n: number): string => {
@@ -90,18 +90,18 @@ export const timeSince = (now: Date, date: Date): string => {
   const days = hours / 24;
   const years = days / 365;
 
-  return (
-    ((seconds < 45 && template("seconds", seconds)) ||
+  return ("il y a " +
+    ((seconds < 45 && template("secondes", seconds)) ||
       (seconds < 90 && template("minute", 1)) ||
       (minutes < 45 && template("minutes", minutes)) ||
-      (minutes < 90 && template("hour", 1)) ||
-      (hours < 24 && template("hours", hours)) ||
-      (hours < 42 && template("day", 1)) ||
-      (days < 30 && template("days", days)) ||
-      (days < 45 && template("month", 1)) ||
-      (days < 365 && template("months", days / 30)) ||
-      (years < 1.5 && template("year", 1)) ||
-      template("years", years)) + " ago"
+      (minutes < 90 && template("heure", 1)) ||
+      (hours < 24 && template("heures", hours)) ||
+      (hours < 42 && template("jour", 1)) ||
+      (days < 30 && template("jours", days)) ||
+      (days < 45 && template("mois", 1)) ||
+      (days < 365 && template("mois", days / 30)) ||
+      (years < 1.5 && template("an", 1)) ||
+      template("ans", years))
   );
 };
 
